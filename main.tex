@@ -1,0 +1,100 @@
+%Crea la instancia del documento. Le indica a Latex como "imprimir" el documento
+%que escribes. Nota que al final, junto a "11pt", existe una palabra que dice
+%"Final". en ese lugar puedes tener dosvalores:
+%    final - Indica que la version a compilar (e imprimir) es el documento final
+%            Analogamente a programacion, digamos que es "produccion"
+%    draft - Indica que el documento a compilar (e imprimir) esta en edicin.
+%            Esto provoca que compile mas rapido pero, como resultado, 
+%            los hipervinculos, y las imagenes, no seran imprimidas en el documento.
+%            Es bastante util cuando tienes un documento con mas de 15 imagenes, ya que
+%            las imagenes alentan bastante el proceso de compilado.
+%            Mientras no tengas imagenes, o no quieras ver las imagenes, deja el
+%            valor de "draft".
+\documentclass[oneside,11pt,final]{book}
+    %Margenes especificados por la CATT
+    \usepackage[letterpaper, lmargin=3cm, rmargin=2cm, tmargin=2cm, bmargin= 2cm]{geometry}
+    \usepackage[spanish, activeacute]{babel} %Definir idioma spanish
+    \usepackage[utf8]{inputenc} %Para usar acentos y otros caracteres UTF-8
+    \usepackage[nottoc]{tocbibind} %Para que la seccion de referencias aparezca
+                                   %como entrada en el indice
+    \usepackage{enumerate}
+    %\usepackage[hidelinks]{hyperref} %Para que notas, referencias e indice se
+    %hipervinculicen automaticamente
+    \usepackage{graphicx}
+    \usepackage{wrapfig}
+    \usepackage{microtype}
+    \usepackage{vwcol}
+    \usepackage{longtable} %Para tablas gigantes
+    %Definir ruta de graficos
+    \graphicspath{ {imagenes/general/}{imagenes/diagramas/} }
+    %No usar hasta que tengas glosario.
+    %\usepackage[xindy,toc]{glossaries} %Para incluir entradas de glosario
+    %\makeglossaries
+    %Cargar el archivo glosario.tex
+    %\loadglsentries{glosario}
+    \usepackage{amssymb}
+    \usepackage[usenames,dvipsnames,table]{xcolor}
+    \usepackage{amsmath}
+    \usepackage{color}
+    \usepackage{tikz}
+    \usepackage[final]{pdfpages}
+    \usepackage{wallpaper,lipsum}
+    \usepackage{colortbl}
+    \usepackage{txfonts}
+    \usepackage{mathdots}
+    \usepackage{subfigure}
+    \usepackage{sepacrolTheme}
+    \usepackage{sepacrolAnalisis}
+    \usepackage{sepacrol}
+    \usepackage{epsfig}
+    \usepackage{multirow}
+    
+    \usepackage[classicReIm]{kpfonts}
+    %Definir el titulo del TT
+    \title{\textbf{Sistema de evaluación de la técnica del estilo crol en natación utilizando patrones de distancia (SEPACROL)}}
+    %Definir el nombre de los integrantes.
+    %( los "\\" son para insertar un salto de linea)
+    \author{Hoyos Estrada Edgar Omar\\
+            López Zaragoza Joscelyn Meztli}
+    
+    \begin{document}
+    \frontmatter
+    \input{portada/portada}
+    %Tabla de contenido
+    \tableofcontents 
+    %Indice de figuras
+    \listoffigures
+    %Lista de tablas
+    \listoftables
+    
+    \mainmatter
+
+    %Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec orci ac mauris vestibulum
+    %En el cuadro \ref{fig:pato}, se puede ver la imagen de un pato.
+    %Como agregar imagenes
+    %\begin{figure}[h!]
+        %\label{fig:pato}
+       % \includegraphics[clip=true,trim=5cm 5cm 5cm 5,width=\linewidth]{cu/meztli}
+        %\caption{Imagen de un pato (meztli)}
+    %\end{figure}
+    
+    
+    \chapter{Manual de instalacion}
+    \input{manualInstala/insta_main}
+ 
+    
+    %Dev_MA: COMENTADO por no existencia de imagen
+    %\begin{figure}[h!]
+    %    \label{fig:CU5.0}
+    %   \includegraphics[clip=true,trim=5cm 5cm 5cm 5,width=\linewidth]{cu/CargarVideo}
+    %	\caption{Imagen de CUCG5.0 Cargar Vídeo}
+    %\end{figure}
+    
+    
+    
+    %\backmatter
+    %\bibliography{referencias}
+    %\bibliographystyle{unsrt}
+    %\printglossary[title=Glosario]
+    \end{document}
+    

@@ -1,0 +1,67 @@
+\begin{enumerate}
+    \item \textbf{Procesamiento de vídeo:}
+    Es el componente que a partir del flujo del video obtiene los frames
+    para ello se toma en cuenta la codificación.
+    Los frames obtenidos del video se eligen los que cumplen 
+    con tres marcas de un nadador.
+    \item \textbf{Segmentación de la imagen por color:}
+    Se detectan las tres marcas en el brazo del nadador 
+    para evaluar su brazada:
+    \begin{itemize}
+        \item Color verde la del hombro.
+        \item Color amarillo la del codo.
+        \item Color rojo en la muñeca.
+    \end{itemize}
+    En la patada se contará con la detección de tres 
+    marcas que están colocadas en el siguiente orden:
+\begin{itemize}
+   \item Color verde en la parte baja de la rodilla.
+   \item Color amarillo en el tobillo.
+   \item Color rojo recubriendo parte del empeine, recubriendo lateralmente 
+   y concluyendo en la parte de la planta del pie, justo por debajo del empeine.
+\end{itemize}
+    Los colores de cada marca son convertidos en una máscara binaria.
+\\*
+    \item \textbf{Obtención del cluster (identificación de la marca):}
+    En esta etapa del proceso se identifica la marca de color previamente 
+    segmentada, procurando minimizar el ruido resultante de la binarización de 
+    la imagen.\\
+    Se estima que, de acuerdo a la calidad de la segmentación de color, la
+    identificación de la marca se pueda hacer mediante agrupación de píxeles 
+    semejantes mediante búsqueda en profundidad.
+    Finalmente, el cluster resultante es adaptado a una forma regular y se obtiene el
+    centroide de dicha figura.
+\\*
+    \item \textbf{Cálculo de vectores:}
+    Por medio del centroide de cada marca, se unen matemáticamente las tres marcas de 
+    color: las marcas roja, verde y amarilla formaran un triángulo. Con ello, podrán
+    ser calculados dos vectores para poder conformar la fórmula del arco coseno.
+    Se debe tomar como origen un centroide para calcular un ángulo:
+
+\begin{longtable}{ | p{5.5cm} | p{5.5cm} | }
+	\caption{Marca origen respecto del ángulo a calcular}
+	\label{table:marcaorigen}
+	\\	\hline
+		 \textbf{Marca origen} &\textbf{Ángulo}
+		\\ \hline
+        \textbf{Verde}&Ángulo de muñeca.
+        \\ \hline
+        \textbf{Amarilla}&Ángulo hombro.
+        \\ \hline
+        \textbf{Roja}&Ángulo de codo.
+        \\ \hline
+\end{longtable}
+
+    \item \textbf{Reconocimiento de patrones:}
+    En esta fase, se evaluará que los ángulos obtenidos estén dentro de un rango 
+    definido con base en literatura basada en la biomecánica de la natación, 
+    así como en los valores obtenidos mediante el análisis de grabaciones 
+    realizadas a nadadores de alto rendimiento. Esto, con la finalidad de adaptar 
+    la evaluación de patrones a la envergadura y complexión de nadadores mexicanos.
+\\*
+    \item \textbf{Visualización de resultados:}
+\\*
+    Elaboración de un reporte de resultados dirigido al entrenador. Dicho reporte 
+    contendrá datos tanto de la brazada como de la patada del nadador.
+    Contendrá datos tanto del nadador como del entrenador.
+\end{enumerate}

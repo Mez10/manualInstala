@@ -1,0 +1,193 @@
+\begin{itemize}
+    \item \textbf{Instalación y configuración del software base}
+    \\
+    \textbf{Python}
+    \\
+    Es un lenguaje de programación interpretado, multiparadigma que
+    soporta programación orientada a objetos, programación imperativa
+    y programación funcional.
+    \\
+    \item \textbf{Localización}
+    \\
+    Se localiza en el Disco C (normalmente, la partición principal 
+    del disco duro en Windows), en la subcarpeta Archivos de programa.
+    \\
+    \item \textbf{Procedimiento de Instalación}
+    \\
+    \begin{itemize}
+        \item Entrar al sitio oficial de Python.
+        \item Dar click en el que corresponde al sistema operativo Windows.
+        \item Descargar la version 3.x con arquitectura x64 o x86 según 
+        corresponda la versión de Windows instalada en su PC.
+        \item Ejecute el instalador de Python dando doble clic sobre el
+        archivo ejecutable.
+        \item Dar clic en \textbf{siguiente} hasta llegar al botón \textbf{finalizar}.
+        \item Para verificar que está instalado Python, favor de seguir estos pasos:
+        \begin{enumerate}
+            \item Dar clic en el botón \textbf{inicio}.
+            \item Clic en la opción Ejecutar y escribir \textbf{cmd}.
+            \item Pulsar Enter
+            \item Se abrirá la consola de Windows
+            \item Buscar la carpeta de C:\textbackslash{python3.x} y debe mostrar unos 
+            cocodrilos y podras dar enter y salir de la consola de python por medio 
+            del comando exit().
+        \end{enumerate}
+    \end{itemize}
+
+        \item \textbf{Procedimiento de configuración}
+        \\
+        \begin{enumerate}
+            \item Modificar las variables de entorno
+            \item Modificar el PATH. Para ello, dar doble clic en editar, con ello se 
+            situará hasta el cursor hasta el final de la línea. Allí es donde se deberá 
+            agregar la ruta \textbf{C:\textbackslash{python3.x}}
+            \item Fin de los pasos de instalación.
+        \end{enumerate}
+\end{itemize}  
+
+\textbf{Open CV}
+\\
+Librería open source para procesamiento de imágenes. Principalmente utilizada para
+computación visual cuenta con estructuras básicas de datos como optimización de matrices
+y procesamiento de video.
+\textbf{Localización}
+\\
+Se localiza en el disco C y en los archivos de programa.
+\\
+\textbf{Procedimiento de Instalación}
+\\
+\begin{enumerate}
+    \item Bajar el Open CV 3 package del sitio oficial. 
+    \item Dar click en el que corresponde al sistema operativo Windows.
+    \item Instalar en c:/opencv.
+    \item Instalar mini conda 
+    \item Entrar a la consola de mini conda. 
+    \item En la terminal de mini conda escribir: \textbf{conda install opencv3}
+    \item Verificar que fue instalado accediendo a python en la terminal, luego, escribir
+    \textbf{import cv2} y pulsar Enter, hecho esto, deben aparecer los cocodrilos de python
+    en la terminal.
+    \item No debe aparecer ningun mensaje de error.
+    \item Fin de la instalación.
+\end{enumerate}
+\textbf{Procedimiento de configuración de OpenCV 3}
+\\
+Se verifica que este instalado en la siguiente ruta:
+\begin{itemize}
+    \item C:\textbackslash{Users} \textbackslash{Anaconda}
+    \item C:\textbackslash{Users} \textbackslash{Anaconda} \textbackslash{Scripts}
+\end{itemize}
+De acuerdo con la arquitectura de su PC (x64 o x86), debería ver el directorio \textbf{opencv}
+en la ruta que corresponda según la siguiente tabla:
+\begin{longtable}{ | p{5.5cm} | p{5.5cm} | p{5.5cm} | }
+	\caption{Directorios de OpenCV por arquitectura}
+	\label{table:opencvarquitectura}
+	\\	\hline
+		 \textbf{Arquitectura} &\textbf{Directorio}&\textbf{Ruta}
+		\\ \hline
+        \textbf{32 bits}&OPENCV\_DIR&C:\textbackslash{opencv} \textbackslash{build} \textbackslash{x86} \textbackslash{vc12}
+        \\ \hline
+        \textbf{64 bits}&OPENCV\_DIR&C:\textbackslash{opencv} \textbackslash{build} \textbackslash{x64} \textbackslash{vc12}
+        \\ \hline
+\end{longtable}
+\textbf{Parámetros a configurar}
+\begin{itemize}
+    \item Ninguno.
+\end{itemize}   
+ 
+\textbf{MySql}
+\\
+Es un sistema de gestión de bases de datos relacional desarrollado bajo licencia dual
+GPL/Licencia comercial por Oracle Corporation y está considerada como la base datos
+open source más popular del mundo.
+\\
+\textbf{Localización}
+\\
+Por defecto, se localiza en el Disco C (normalmente, la partición principal del 
+disco duro en Windows), en la subcarpeta Archivos de programa.
+\textbf{Procedimiento de Instalación}
+\\ 
+\begin{itemize}
+    \item Entrar al sitio oficial de MySql 
+    \item Dar click en el que corresponde al sistema operativo Windows.
+    \item Descargar la versión mysql-installer-community 5.5 
+    \item Abrir el ejecutable.
+    \item Hacer doble clic en setup.exe para iniciar el proceso de configuración.
+    \item Hacer clic en \textbf{personalizar}.
+    \item Hacer clic en \textbf{cambiar}.
+    \item En la siguiente ventana en el campo de texto titulado Folder Name, 
+    se cambiará la ruta por \textbf{C:\textbackslash{ServerMySQL}} y dar clic en aceptar.
+    \item En la siguiente ventana hacer clic en \textbf{siguiente} y MySQL estará 
+    listo para instalarse.
+    \item Se sugiere saltar el registro y dar \textbf{siguiente}.
+    \item La instalación estará lista cuando aparezca la ventana MySQL Sing-Up.
+\end{itemize}
+\textbf{Procedimiento de configuración}
+\begin{itemize}
+   \item Para iniciar la configuración dejar marcado MySQL 
+   Server Now y dar clic en \textbf{finalizar}.
+   \item Dar clic en Server Machine dejar el puerto por defecto (3306).
+   \item Elegir la configuración estándar y dar clic en siguiente.
+   \item Verificar que están marcados:
+   \begin{itemize}
+       \item Install As Windows Service.
+       \item Launch the MySQL Server Automatically.
+   \end{itemize}
+    \item Dar clic en siguiente.
+    \item Crear una contraseña de administrador como se solicita en la ventana.
+    Verificar que root este marcado como \textbf{enable root access from remote 
+    machine} y dar clic en siguiente.
+    \item Dar clic en ejecutar para iniciar el servidor de MySQL y dar clic en finalizar.
+    \item Entrar a una consola de MySQL y escribir el siguiente comando: mysql -u root -p
+    y presione Enter; acto seguido, se le pedirá que ingrese la contraseña de administrador
+    que configuró en pasos anteriores.
+    \item No debe salir ningun error.
+    \item Se termino el proceso de configuración.
+\end{itemize}
+\textbf{SQL Alchemy}
+\\
+Es un Object Relational Mapper, es presentado y descrito completamente para python. La 
+persistencia es automática.
+\textbf{Localización}
+\\
+Por defecto, se localiza en el Disco C (normalmente, la partición principal del 
+disco duro en Windows), en la subcarpeta Archivos de programa.
+\\
+\textbf{Procedimiento de Instalación}
+Los pasos son los siguientes:
+\begin{itemize}
+    \item Ir al sitio oficial de SQL Alchemy y descargar el ejecutable según la 
+    de su PC, es decir, 32 bits o 64 bits.
+    \item Entrar a la consola y entrar a carpeta \textbf{C:\textbackslash{Python3.x}\textbackslash{python.exe}}
+    \textbackslash{setup.py} install
+    \item Instalación finalizada
+\end{itemize}
+\textbf{Procedimiento de configuración}
+\begin{itemize}
+    \item Ninguno
+\end{itemize}
+\textbf{Pyramid}
+\\
+Es un framework para construir aplicaciones web desarrolladas con python.
+\\
+\textbf{Localización}
+\\
+Por defecto, se localiza en el Disco C (normalmente, la partición principal del 
+disco duro en Windows), en la subcarpeta Archivos de programa.
+\\
+\textbf{Procedimiento de Instalación}
+\\
+Los pasos son los siguientes:
+\begin{itemize}
+    \item Ir al sitio oficial de Pyramid y descargar el ejecutable según la 
+    de su PC, es decir, 32 bits o 64 bits.
+    \item Entrar a la consola de Windows e instalar con los siguientes comandos:
+    \begin{enumerate}
+        \item pip install pyramid==1.9.1
+    \end{enumerate}
+    \item La instalación habrá finalizado cuando no se envíe ningun mensaje de error.
+\end{itemize}
+
+\textbf{Procedimiento de configuración}
+\begin{itemize}
+    \item Ninguno.
+\end{itemize}
